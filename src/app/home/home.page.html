@@ -1,7 +1,21 @@
 <ion-content>
-  <ion-img alt="" class="logo" name="image" src="./assets/logo.png"></ion-img>
-  <ion-slides>
 
+  <ion-img alt="" class="logo" name="image" src="./assets/logo.png"></ion-img>
+
+
+  <ion-segment (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="login">
+
+      <ion-label>Login</ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button value="cadastrar">
+      <ion-label>Cadastrar</ion-label>
+    </ion-segment-button>
+
+  </ion-segment>
+
+  <ion-slides>
 
     <ion-slide>
 
@@ -50,13 +64,5 @@
     </ion-slide>
 
   </ion-slides>
-  <div class="ocean">
-
-    <div class="waves"></div>
-
-    <div class="container ion-text-center">
-      <span>MutBot</span>
-    </div>
-  </div>
 
 </ion-content>
