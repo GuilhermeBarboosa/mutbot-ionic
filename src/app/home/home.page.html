@@ -2,67 +2,41 @@
 
   <ion-img alt="" class="logo" name="image" src="./assets/logo.png"></ion-img>
 
+  <ion-text class="titleText ion-text-center">
+    <p class="principal">Faça seu login!</p>
+    <p class="subTitle">Ou crie uma conta para continuar</p>
+  </ion-text>
 
-  <ion-segment (ionChange)="segmentChanged($event)">
-    <ion-segment-button value="login">
 
-      <ion-label>Login</ion-label>
-    </ion-segment-button>
+  <ion-item class="login">
+    <div class="box-login ion-padding">
 
-    <ion-segment-button value="cadastrar">
-      <ion-label>Cadastrar</ion-label>
-    </ion-segment-button>
+      <ion-item class="ion-margin-top" lines="none">
+        <ion-img alt="" class="logo-input" name="image" src="./assets/icon/call.svg"></ion-img>
+        <ion-input type="email" placeholder="(00) 000000-000"></ion-input>
+      </ion-item>
 
-  </ion-segment>
+      <!-- [(ngModel)]= "userLogin.password" -->
+      <ion-item class="ion-margin-top" lines="none">
+        <ion-img alt="" class="logo-input" name="image" src="./assets/icon/lock.svg"></ion-img>
+        <ion-input type="password" placeholder="Senha"></ion-input>
+      </ion-item>
 
-  <ion-slides>
+      <!-- (click)="login()" -->
+      <ion-button class="ion-margin-top">Entrar</ion-button>
 
-    <ion-slide>
+      <ion-button class="register ion-margin-top">Cadastrar</ion-button>
 
-      <div class="slide-inner ion-padding">
+      <ion-item class="img-login">
+        
+        <ion-label>
+          <ion-img alt="" class="login-list" name="image" src="./assets/login-google.png"></ion-img>
+        </ion-label>
 
-        <span>Login</span>
+      </ion-item>
 
-        <ion-item class="ion-margin-top" lines="none">
-          <!-- [(ngModel)]= "userLogin.email" -->
-          <ion-input type="email" placeholder="E-mail" ></ion-input>
-        </ion-item>
+    </div>
+  </ion-item>
 
-        <!-- [(ngModel)]= "userLogin.password" -->
-        <ion-item class="ion-margin-top" lines="none">
-          <ion-input type="password" placeholder="Senha" ></ion-input>
-        </ion-item>
-
-        <!-- (click)="login()" -->
-        <ion-button class="ion-margin-top"  color="light" expand="block">Entrar</ion-button>
-
-      </div>
-    </ion-slide>
-
-    <ion-slide>
-      <div class="slide-inner ion-padding">
-
-        <span>Cadastro</span>
-
-        <ion-item class="ion-margin-top" lines="none">
-          <!-- [(ngModel)]= "userLogin.email" -->
-          <ion-input type="text" placeholder="Nome" ></ion-input>
-        </ion-item>
-
-        <ion-item class="ion-margin-top" lines="none">
-          <!-- [(ngModel)]= "userLogin.email" -->
-          <ion-input type="email" placeholder="Email" ></ion-input>
-        </ion-item>
-
-        <ion-item class="ion-margin-top" lines="none">
-          <!-- [(ngModel)]= "userLogin.email" -->
-          <ion-input type="password" placeholder="Senha" ></ion-input>
-        </ion-item>
-
-        <ion-button class="ion-margin-top"  color="light" expand="block">Cadastrar</ion-button>
-      </div>
-    </ion-slide>
-
-  </ion-slides>
 
 </ion-content>

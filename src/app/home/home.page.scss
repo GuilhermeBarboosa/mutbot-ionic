@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+
 ion-content {
 
   .logo {
@@ -10,10 +12,27 @@ ion-content {
     display: flex;
   }
 
+  .titleText {
+
+    color: #563939;
+    font-family: 'Roboto';
+    font-size: 40px;
+
+    .principal {
+      font-weight: 800;
+      margin-bottom: 0px;
+    }
+
+    .subTitle {
+      margin-top: 0px;
+      font-size: 20px;
+    }
+  }
+
 
 }
 
-ion-segment{
+ion-segment {
   margin-top: 10%;
   border: 1px solid #91cbd7;
   width: 60%;
@@ -24,47 +43,74 @@ ion-segment{
 
 }
 
-ion-slides {
-
+.login {
   position: absolute;
   justify-items: center;
-  height: 70%;
+  height: 55%;
   left: 0;
   right: 0;
   left: 0;
-  top: 30%;
+  top: 35%;
 
-  .slide-inner {
-    width: 70%;
-    background-color: #91cbd7;
-    border-radius: 2%;
-    color: #ffffff;
-
-   
-  }
-
-  ion-slide {
-    position: relative;
+  .box-login {
+    position: flex;
     margin-top: 0px;
-    height: 75%;
+    height: 100%;
+    width: 100%;
   }
+
+  ion-input {
+    margin-left: 5%;
+  }
+
+  .logo-input {
+    width: 10%;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+
+  .register {
+    --color: #00000;
+    --color-checked: #08a391;
+    --indicator-height: 4px;
+    --background: #FFFF;
+    --border-color: #6FC7E9;
+    --border-style: solid;
+    --border-width: 1px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10%;
+    width: 40%;
+    border-radius: 40%;
+  }
+
+  ion-button {
+    --color: #FFFF;
+    --color-checked: #08a391;
+    --indicator-height: 4px;
+    background-color: #4E9BB9;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10%;
+    width: 40%;
+    border-radius: 40%;
+  }
+
+  .img-login {
+    padding-top: 5%;
+    display: block;
+    margin: auto;
+    width: 50%;
+  }
+
+  .login-list {
+    padding-top: 5%;
+    display: block;
+    margin: auto;
+    width: 100%;
+  }
+
 }
-
-// .ocean{
-//   position: absolute;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   height: 53%;
-//   background-position: center;
-//   background-color: white;
-
-//   span{
-//     position: absolute;
-//     bottom: 10%;
-//     left: 0;
-//     right: 0;
-//     margin: auto;
-//     color: rgb(255, 255, 255);
-//   }
-// }
