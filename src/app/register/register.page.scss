@@ -1,0 +1,122 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+
+ion-content {
+
+  .logo {
+    width: 50%;
+    margin: 0;
+    margin-top: 8%;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+
+  .titleText {
+
+    color: #563939;
+    font-family: 'Roboto';
+    font-size: 40px;
+
+    .principal {
+      font-weight: 800;
+      margin-bottom: 0px;
+      margin-top: 1%;
+    }
+
+    .subTitle {
+      margin-top: 0px;
+      font-size: 20px;
+    }
+  }
+
+
+}
+
+ion-segment {
+  margin-top: 10%;
+  border: 1px solid #91cbd7;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  --background: #91cbd7;
+
+}
+
+.login {
+  position: absolute;
+  justify-items: center;
+  height: 90%;
+  left: 0;
+  right: 0;
+  left: 0;
+  top: 25%;
+
+  .box-login {
+    position: flex;
+    margin-top: 0px;
+    height: 100%;
+    width: 100%;
+  }
+
+  ion-input {
+    margin-left: 5%;
+  }
+
+  ion-label{
+    color: #4E9BB9;
+    font-weight: 800;
+    margin-left: 4%;
+  }
+
+  .info-checkbox{
+    font-size: medium;
+  }
+
+  .logo-input {
+    width: 5%;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    opacity: 0.8;
+  }
+
+  .register {
+    --color: #00000;
+    --color-checked: #08a391;
+    --indicator-height: 4px;
+    --background: #FFFF;
+    --border-color: #6FC7E9;
+    --border-style: solid;
+    --border-width: 1px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10%;
+    width: 40%;
+    border-radius: 40%;
+  }
+
+  ion-button {
+    --color: #FFFF;
+    --color-checked: #08a391;
+    --indicator-height: 4px;
+    background-color: #4E9BB9;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10%;
+    width: 40%;
+    border-radius: 40%;
+  }
+
+
+  .login-list {
+    padding-top: 5%;
+    display: block;
+    margin: auto;
+    width: 100%;
+  }
+
+}
