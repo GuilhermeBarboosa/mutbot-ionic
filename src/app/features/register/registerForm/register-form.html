@@ -1,6 +1,6 @@
 <ion-content>
-
-  <ion-img alt="" class="logo" name="image" src="./assets/logo.png"></ion-img>
+  <form [formGroup]="form" novalidate>
+    <ion-img alt="" class="logo" name="image" src="./assets/logo.png"></ion-img>
 
   <ion-text class="titleText ion-text-center">
     <p class="principal">Faça seu registro!</p>
@@ -13,48 +13,50 @@
       <ion-label>Nome completo</ion-label>
       <ion-item lines="none">
         <ion-img alt="" class="logo-input" name="image" src="./assets/icon/username.svg"></ion-img>
-        <ion-input type="email" placeholder="Jonas Irmão da Silva"></ion-input>
+        <ion-input type="text" formControlName="name"></ion-input>
       </ion-item>
 
       <ion-label>Nome de usuário</ion-label>
       <ion-item lines="none">
         <ion-img alt="" class="logo-input" name="image" src="./assets/icon/user.svg"></ion-img>
-        <ion-input type="email" placeholder="jonas.brocha"></ion-input>
+        <ion-input type="text" formControlName="userName"></ion-input>
       </ion-item>
 
       <ion-label>Celular</ion-label>
       <ion-item lines="none">
         <ion-img alt="" class="logo-input" name="image" src="./assets/icon/call.svg"></ion-img>
-        <ion-input type="email" placeholder="(00) 000000-000"></ion-input>
+        <ion-input type="text" formControlName="tel"></ion-input>
       </ion-item>
 
       <ion-label>E-mail</ion-label>
       <ion-item lines="none">
         <ion-img alt="" class="logo-input" name="image" src="./assets/icon/email.svg"></ion-img>
-        <ion-input type="email" placeholder="jonasbrother@email.com"></ion-input>
+        <ion-input type="email" formControlName="email"></ion-input>
       </ion-item>
 
       <ion-label>Senha</ion-label>
       <ion-item lines="none">
         <ion-img alt="" class="logo-input" name="image" src="./assets/icon/lock.svg"></ion-img>
-        <ion-input type="email" placeholder="*********"></ion-input>
+        <ion-input type="text" formControlName="password"></ion-input>
       </ion-item>
 
       <ion-label>Confirmar senha</ion-label>
       <ion-item lines="none">
         <ion-img alt="" class="logo-input" name="image" src="./assets/icon/lock.svg"></ion-img>
-        <ion-input type="password" placeholder="*********"></ion-input>
+        <ion-input type="text" formControlName="confirmSenha"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-checkbox></ion-checkbox>
+        <ion-checkbox formControlName="term"></ion-checkbox>
         <ion-label class="info-checkbox">Concordo com os Termos e condições de uso.</ion-label>
       </ion-item>
 
-      <ion-button class="register ion-margin-top">Cadastrar</ion-button>
+      <ion-button class="register ion-margin-top" (click)='cadastrar()'>Cadastrar</ion-button>
 
     </div>
   </ion-item>
+  </form>
+  
 
 
 </ion-content>
