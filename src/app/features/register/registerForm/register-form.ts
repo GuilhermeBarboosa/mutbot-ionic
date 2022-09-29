@@ -1,8 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
-import { finalize, Subject, takeUntil } from 'rxjs';
+import { Subject, takeUntil } from 'rxjs';
 import { RegisterService } from 'src/app/shared/services/register.service';
-
+import { Location } from '@angular/common';
+import { MessageService } from 'src/app/shared/services/messages.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register-form.html',
@@ -14,8 +15,10 @@ export class RegisterForm implements OnInit, OnDestroy {
   private unsubscribeNotifier = new Subject<void>();
 
   constructor(
-    public formBuilder: FormBuilder,
-    public registerService: RegisterService) { }
+    private formBuilder: FormBuilder,
+    private registerService: RegisterService,
+    private location: Location,
+    private messageService: MessageService) { }
 
   ngOnInit() {
     this.createForm();
@@ -43,10 +46,10 @@ export class RegisterForm implements OnInit, OnDestroy {
       takeUntil(this.unsubscribeNotifier)
     ).subscribe({
       next: register => {
-        console.log('sucesso', register)
+        this.messageService.sucess('Cadastro efetuado com sucesso!');
+        this.location.back();
       },
-      error: (error) => console.log(error, 'erro')
+      error: (error) => this.messageService.error('Falha no servidor entre em contato com administrador do sistema!')
     });
   }
-
 }
