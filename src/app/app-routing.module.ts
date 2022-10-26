@@ -14,7 +14,12 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./features/register/register.module').then( m => m.RegisterPageModule)
-  },  {
+  },
+  {
+    path: 'page',
+    loadChildren: () => import('./features/page-questions/page-questions.module').then( m => m.PageQuestionsPageModule)
+  },
+  {
     path: 'flow',
     loadChildren: () => import('./flow/flow.module').then( m => m.FlowPageModule)
   },
