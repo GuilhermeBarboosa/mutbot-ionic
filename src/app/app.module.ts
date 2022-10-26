@@ -9,8 +9,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
-import { NavbarComponent } from './shared/components/navbar/navbar.component';
-
 @NgModule({
   declarations: [AppComponent],
   imports: [

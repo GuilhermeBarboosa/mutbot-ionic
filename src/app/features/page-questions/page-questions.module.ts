@@ -8,6 +8,7 @@ import { PageQuestionsPageRoutingModule } from './page-questions-routing.module'
 
 import { PageQuestionsPage } from './page-questions.page';
 import { NavbarComponent } from 'src/app/shared/components/navbar/navbar.component';
+import { CardsQuestionsComponent } from '../../shared/components/cards-questions/cards-questions.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { NavbarComponent } from 'src/app/shared/components/navbar/navbar.compone
     IonicModule,
     PageQuestionsPageRoutingModule,
   ],
-  declarations: [PageQuestionsPage, NavbarComponent],
+  declarations: [PageQuestionsPage, NavbarComponent, CardsQuestionsComponent],
 })
 export class PageQuestionsPageModule {}

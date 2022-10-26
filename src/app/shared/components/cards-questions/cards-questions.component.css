@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+
+*{
+  font-family: "Roboto", sans-serif;
+}
+
+ion-card,
+ion-thumbnail,
+ion-item,
+ion-card-header,
+ion-card-subtitle {
+  padding: 0;
+  margin: 0;
+}
+
+ion-card{
+  border: 1px solid rgb(207, 207, 207);
+  margin: 1%;
+}
+
+
+.profile {
+  width: 40px;
+}
+
+.header {
+  margin-top: 1%;
+  display: flex;
+}
+
+.header-title {
+  position: relative;
+  text-align: center;
+  margin: auto 0;
+  margin-right: 3%;
+  margin-left: 2%;
+  color: #6d5c5c;
+  font-weight: 500;
+}
+
+.hours{
+  margin-left: 2%;
+}
+
+ion-card-subtitle {
+  color: #6d5c5c;
+  font-weight: 400;
+
+}
+
+.qtd_like {
+  margin: 0;
+  text-align: center;
+  color: green;
+  font-size: large;
+}
+
+.img_like {
+  width: 25%;
+  margin: auto;
+  display: block;
+}
+
+#dislike {
+  transform: rotate(180deg);
+}
+
+.questions {
+  color: #383838;
+}
