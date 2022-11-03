@@ -9,17 +9,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
-
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule,
-            IonicModule.forRoot(),
-            AppRoutingModule,
-            HttpClientModule,
-            SharedModule,
-            FormsModule,
-            ReactiveFormsModule,
-            ],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    HttpClientModule,
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
