@@ -58,9 +58,20 @@
                 --bs-btn-active-border-color: #563939;
 
                 margin-bottom: 15px;
+                padding: 3px 5px;
             }
+        }
 
+        .form-button{
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
 
+            button{
+                background: #563939;
+                color: #fff;
+
+            }
         }
     }
 
