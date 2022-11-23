@@ -51,13 +51,13 @@ ion-segment {
 }
 
 .login {
-  position: absolute;
+  position: flex;
   justify-items: center;
-  height: 90%;
+  height: 0%;
   left: 0;
   right: 0;
-  left: 0;
-  top: 25%;
+  top: 15%;
+  width: 100%;
 
   .box-login {
     position: flex;
