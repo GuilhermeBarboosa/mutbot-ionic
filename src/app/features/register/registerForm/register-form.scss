@@ -33,6 +33,12 @@ ion-content {
 
 }
 
+.home{
+  --background: #E3E3E3;
+  --border-radius: 10px;
+  margin-top:5px;
+  }
+
 ion-segment {
   margin-top: 10%;
   border: 1px solid #91cbd7;
@@ -85,30 +91,32 @@ ion-segment {
   }
 
   .register {
-    --color: #00000;
+    --color: #FFFFFF;
     --color-checked: #08a391;
     --indicator-height: 4px;
-    --background: #FFFF;
+    --background: #6FC7E9;
     --border-color: #6FC7E9;
     --border-style: solid;
     --border-width: 1px;
+    border-radius: 20px;
     margin: 0 auto;
     display: block;
     margin-top: 10%;
-    width: 40%;
-    border-radius: 40%;
+    width: 70%; 
   }
 
   ion-button {
     --color: #FFFF;
     --color-checked: #08a391;
     --indicator-height: 4px;
+    --border-radius:10px;
     background-color: #4E9BB9;
     margin: 0 auto;
     display: block;
     margin-top: 10%;
-    width: 40%;
-    border-radius: 40%;
+    border-radius: 70%;
+    width: 80%;
+    height: 50px;
   }
 
 
