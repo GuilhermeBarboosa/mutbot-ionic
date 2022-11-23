@@ -1,0 +1,16 @@
+#main-panel {
+    display: flex;
+
+    app-main-menu {
+        z-index: 1;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        transition: margin 700ms;
+
+        &.open {
+            top: 32px;
+            margin-left: 0px;
+        }
+    }
+}

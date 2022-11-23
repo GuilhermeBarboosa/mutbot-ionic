@@ -21,7 +21,7 @@ const routes: Routes = [
   },
   {
     path: 'flow',
-    loadChildren: () => import('./flow/flow.module').then( m => m.FlowPageModule)
+    loadChildren: () => import('./features/flow/flow.module').then( m => m.FlowPageModule)
   },
 
 ];

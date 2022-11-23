@@ -9,34 +9,32 @@
 
 
   <ion-item class="login">
-    <div class="box-login ion-padding">
+    <form [formGroup]="form">
+      <div class="box-login ion-padding">
 
-      <ion-item class="ion-margin-top" lines="none">
-        <ion-img alt="" class="logo-input" name="image" src="./assets/icon/call.svg"></ion-img>
-        <ion-input type="email" placeholder="(00) 000000-000"></ion-input>
-      </ion-item>
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-img alt="" class="logo-input" name="image" src="./assets/icon/user.svg"></ion-img>
+          <ion-input type="text" formControlName="userName"  placeholder="Usuario"></ion-input>
+        </ion-item>
 
-      <!-- [(ngModel)]= "userLogin.password" -->
-      <ion-item class="ion-margin-top" lines="none">
-        <ion-img alt="" class="logo-input" name="image" src="./assets/icon/lock.svg"></ion-img>
-        <ion-input type="password" placeholder="Senha"></ion-input>
-      </ion-item>
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-img alt="" class="logo-input" name="image" src="./assets/icon/lock.svg"></ion-img>
+          <ion-input type="password" formControlName="password" placeholder="Senha"></ion-input>
+        </ion-item>
 
-      <!-- (click)="login()" -->
-      <ion-button class="ion-margin-top">Entrar</ion-button>
-
-      <ion-button (click)="abrirTela()" class="register ion-margin-top">Cadastrar</ion-button>
-
-      <ion-item class="img-login">
-        
-        <ion-label>
-          <ion-img alt="" class="login-list" name="image" src="./assets/login-google.png"></ion-img>
-        </ion-label>
-
-      </ion-item>
-
-    </div>
+        <ion-button class="ion-margin-top" (click)="login()">Entrar</ion-button>
+  
+        <ion-button (click)="abrirTela()" class="register ion-margin-top">Cadastrar</ion-button>
+  
+        <ion-item class="img-login">
+          
+          <ion-label>
+            <ion-img alt="" class="login-list" name="image" src="./assets/login-google.png"></ion-img>
+          </ion-label>
+  
+        </ion-item>
+  
+      </div>
+    </form>    
   </ion-item>
-
-
 </ion-content>
