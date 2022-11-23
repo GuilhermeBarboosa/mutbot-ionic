@@ -20,13 +20,17 @@
   <ion-item>
     <div class="like">
       <img
+        (click)="plusLike()"
         class="img_like"
         id="like"
         src="https://img1.gratispng.com/20180415/faq/kisspng-arrow-desktop-wallpaper-symbol-clip-art-up-arrow-5ad37ddc5b54e8.2856629015238097563741.jpg"
         slot="start"
       />
-      <h1 class="qtd_like">100</h1>
+      <h1 class="qtd_like">
+        {{ valor }}
+      </h1>
       <img
+        (click)="lessLike()"
         class="img_like"
         id="dislike"
         src="https://img1.gratispng.com/20180415/faq/kisspng-arrow-desktop-wallpaper-symbol-clip-art-up-arrow-5ad37ddc5b54e8.2856629015238097563741.jpg"
