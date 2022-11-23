@@ -51,6 +51,7 @@ ion-segment {
   right: 0;
   left: 0;
   top: 35%;
+  
 
   .box-login {
     position: flex;
@@ -61,6 +62,7 @@ ion-segment {
 
   ion-input {
     margin-left: 5%;
+    
   }
 
   .logo-input {
@@ -73,10 +75,10 @@ ion-segment {
   }
 
   .register {
-    --color: #00000;
+    --color: #FFFFFF;
     --color-checked: #08a391;
     --indicator-height: 4px;
-    --background: #FFFF;
+    --background: #6FC7E9;
     --border-color: #6FC7E9;
     --border-style: solid;
     --border-width: 1px;
@@ -84,7 +86,8 @@ ion-segment {
     display: block;
     margin-top: 10%;
     width: 40%;
-    border-radius: 40%;
+    width: 200.65px;
+    height: 55.27px;
   }
 
   ion-button {
@@ -97,6 +100,8 @@ ion-segment {
     margin-top: 10%;
     width: 40%;
     border-radius: 40%;
+    width: 255.65px;
+    height: 65.27px;
   }
 
   .img-login {
