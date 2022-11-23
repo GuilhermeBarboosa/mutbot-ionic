@@ -1,6 +1,6 @@
 <ion-menu contentId="main-content">
-  <ion-content class="">
-    <ion-content [scrollEvents]="true">
+  <ion-content class="ion-align-self-stretch">
+    <ion-content scroll="false">
       <ion-list>
         <ion-item>
           <ion-icon name="settings-outline" slot="start"></ion-icon>
@@ -27,12 +27,14 @@
           <ion-label>Minhas respostas</ion-label>
         </ion-item>
       </ion-list>
-
-      <div class="logo">
-        <img src="/assets/logo.png" width="40%" />
-      </div>
     </ion-content>
   </ion-content>
+
+  <ion-footer>
+    <div class="logo">
+      <img src="/assets/logo.png" width="50%" />
+    </div>
+  </ion-footer>
 </ion-menu>
 
 <div class="ion-page" id="main-content">
