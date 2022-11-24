@@ -16,7 +16,7 @@ ion-content {
 
     color: #563939;
     font-family: 'Roboto';
-    font-size: 40px;
+    font-size: 2em;
 
     .principal {
       font-weight: 800;
@@ -53,11 +53,10 @@ ion-segment {
 .login {
   position: flex;
   justify-items: center;
-  height: 0%;
-  left: 0;
-  right: 0;
-  top: 15%;
+  top: 0%;
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 
   .box-login {
     position: flex;

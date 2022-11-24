@@ -1,12 +1,12 @@
 <ion-content>
-  <form [formGroup]="form" novalidate>
-    <ion-img alt="" class="logo" name="image" src="./assets/logo.png"></ion-img>
-
+  <ion-img alt="" class="logo" name="image" src="./assets/logo.png"></ion-img>
+  
   <ion-text class="titleText ion-text-center">
     <p class="principal">Faça seu registro!</p>
   </ion-text>
-
-  <ion-item class="login ion-margin-top">
+  
+  <ion-item class="login">
+    <form [formGroup]="form" novalidate style="width: 100%">
     <div class="ion-padding">
 
       <ion-label class="ion-margin-top">Nome completo</ion-label>
@@ -46,15 +46,15 @@
       </ion-item>
 
       <ion-item class="ion-margin-top">
-        <ion-checkbox formControlName="term" ></ion-checkbox>
+        <ion-checkbox formControlName="term"></ion-checkbox>
         <ion-label class="info-checkbox">Concordo com os Termos e condições de uso.</ion-label>
       </ion-item>
 
       <ion-button class="register ion-margin-top" (click)='cadastrar()'>Cadastrar</ion-button>
 
     </div>
-  </ion-item>
   </form>
+  </ion-item>
   
 
 

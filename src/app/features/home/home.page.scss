@@ -86,7 +86,6 @@ ion-item{
   .register {
     --color: #FFFFFF;
     --color-checked: #08a391;
-    --indicator-height: 4px;
     --background: #6FC7E9;
     --border-color: #6FC7E9;
     --border-style: solid;
@@ -94,8 +93,8 @@ ion-item{
     border-radius: 20px;
     margin: 0 auto;
     display: block;
-    margin-top: 10%;
-    width: 70%; 
+    margin-top: 6%;
+    width: 50%;
   }
 
   ion-button {
