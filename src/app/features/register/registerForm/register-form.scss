@@ -16,7 +16,7 @@ ion-content {
 
     color: #563939;
     font-family: 'Roboto';
-    font-size: 2em;
+    font-size: 40px;
 
     .principal {
       font-weight: 800;
@@ -33,12 +33,6 @@ ion-content {
 
 }
 
-.home{
-  --background: #E3E3E3;
-  --border-radius: 10px;
-  margin-top:5px;
-  }
-
 ion-segment {
   margin-top: 10%;
   border: 1px solid #91cbd7;
@@ -51,12 +45,13 @@ ion-segment {
 }
 
 .login {
-  position: flex;
+  position: absolute;
   justify-items: center;
-  top: 0%;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  height: 90%;
+  left: 0;
+  right: 0;
+  left: 0;
+  top: 25%;
 
   .box-login {
     position: flex;
@@ -90,32 +85,30 @@ ion-segment {
   }
 
   .register {
-    --color: #FFFFFF;
+    --color: #00000;
     --color-checked: #08a391;
     --indicator-height: 4px;
-    --background: #6FC7E9;
+    --background: #FFFF;
     --border-color: #6FC7E9;
     --border-style: solid;
     --border-width: 1px;
-    border-radius: 20px;
     margin: 0 auto;
     display: block;
     margin-top: 10%;
-    width: 70%; 
+    width: 40%;
+    border-radius: 40%;
   }
 
   ion-button {
     --color: #FFFF;
     --color-checked: #08a391;
     --indicator-height: 4px;
-    --border-radius:10px;
     background-color: #4E9BB9;
     margin: 0 auto;
     display: block;
     margin-top: 10%;
-    border-radius: 70%;
-    width: 80%;
-    height: 50px;
+    width: 40%;
+    border-radius: 40%;
   }
 
 

@@ -13,7 +13,8 @@ import { LoginResponse } from '../interfaces/LoginResponse.interface';
   providedIn: 'root'
 })
 export class AuthService {
-
+  
+  userLoggedId: number;
   constructor(
     private jwtService: JwtService,
     private httpClient: HttpClient,
@@ -31,6 +32,7 @@ export class AuthService {
     return this.httpClient.post<LoginResponse>(`${environment.api}/auth/login`, body,{
       headers: header
     }).pipe(tap(data  => {
+      this.userLoggedId = data.id;
       this.localStorageService.setItem(TOKEN_KEY, data.token);
       this.localStorageService.setItem(USERNAME_KEY, data.username);
       this.localStorageService.setItem(EMAIL_KEY, data.email);

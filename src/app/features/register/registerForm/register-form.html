@@ -1,51 +1,52 @@
 <ion-content>
-  <ion-img alt="" class="logo" name="image" src="./assets/logo.png"></ion-img>
-  
+  <form [formGroup]="form" novalidate>
+    <ion-img alt="" class="logo" name="image" src="./assets/logo.png"></ion-img>
+
   <ion-text class="titleText ion-text-center">
     <p class="principal">Faça seu registro!</p>
   </ion-text>
-  
+
+
   <ion-item class="login">
-    <form [formGroup]="form" novalidate style="width: 100%">
-    <div class="ion-padding">
+    <div class="box-login ion-padding">
 
-      <ion-label class="ion-margin-top">Nome completo</ion-label>
-      <ion-item lines="none" class="home">
-        <ion-icon name="person-circle-outline"></ion-icon>
-        <ion-input type="text" formControlName="name" placeholder="Jonas Irmão da Silva"></ion-input>
+      <ion-label>Nome completo</ion-label>
+      <ion-item lines="none">
+        <ion-img alt="" class="logo-input" name="image" src="./assets/icon/username.svg"></ion-img>
+        <ion-input type="text" formControlName="name"></ion-input>
       </ion-item>
 
-      <ion-label class="ion-margin-top">Nome de usuário</ion-label>
-      <ion-item lines="none" class="home">
-        <ion-icon name="person-outline"></ion-icon>
-        <ion-input type="text" formControlName="userName" placeholder="Jonas Brother"></ion-input>
+      <ion-label>Nome de usuário</ion-label>
+      <ion-item lines="none">
+        <ion-img alt="" class="logo-input" name="image" src="./assets/icon/user.svg"></ion-img>
+        <ion-input type="text" formControlName="userName"></ion-input>
       </ion-item>
 
-      <ion-label class="ion-margin-top">Celular</ion-label>
-      <ion-item lines="none" class="home">
-        <ion-icon name="call-outline"></ion-icon>
-        <ion-input type="text" formControlName="tel" placeholder="+55 (99) 99999-9999"></ion-input>
+      <ion-label>Celular</ion-label>
+      <ion-item lines="none">
+        <ion-img alt="" class="logo-input" name="image" src="./assets/icon/call.svg"></ion-img>
+        <ion-input type="text" formControlName="tel"></ion-input>
       </ion-item>
 
-      <ion-label class="ion-margin-top">E-mail</ion-label>
-      <ion-item lines="none" class="home">
-        <ion-icon name="mail-outline"></ion-icon>
-        <ion-input type="email" formControlName="email" placeholder="jonasbrother@email.com"></ion-input>
+      <ion-label>E-mail</ion-label>
+      <ion-item lines="none">
+        <ion-img alt="" class="logo-input" name="image" src="./assets/icon/email.svg"></ion-img>
+        <ion-input type="email" formControlName="email"></ion-input>
       </ion-item>
 
-      <ion-label class="ion-margin-top">Senha</ion-label>
-      <ion-item lines="none" class="home">
-        <ion-icon name="lock-closed-outline"></ion-icon>
-        <ion-input type="password" formControlName="password" placeholder="*********"></ion-input>
+      <ion-label>Senha</ion-label>
+      <ion-item lines="none">
+        <ion-img alt="" class="logo-input" name="image" src="./assets/icon/lock.svg"></ion-img>
+        <ion-input type="password" formControlName="password"></ion-input>
       </ion-item>
 
-      <ion-label class="ion-margin-top">Confirmar senha</ion-label>
-      <ion-item lines="none" class="home">
-        <ion-icon name="lock-closed-outline"></ion-icon>
-        <ion-input type="password" formControlName="confirmSenha" placeholder="*********"></ion-input>
+      <ion-label>Confirmar senha</ion-label>
+      <ion-item lines="none">
+        <ion-img alt="" class="logo-input" name="image" src="./assets/icon/lock.svg"></ion-img>
+        <ion-input type="password" formControlName="confirmSenha"></ion-input>
       </ion-item>
 
-      <ion-item class="ion-margin-top">
+      <ion-item>
         <ion-checkbox formControlName="term"></ion-checkbox>
         <ion-label class="info-checkbox">Concordo com os Termos e condições de uso.</ion-label>
       </ion-item>
@@ -53,8 +54,8 @@
       <ion-button class="register ion-margin-top" (click)='cadastrar()'>Cadastrar</ion-button>
 
     </div>
-  </form>
   </ion-item>
+  </form>
   
 
 

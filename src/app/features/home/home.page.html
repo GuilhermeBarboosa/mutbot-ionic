@@ -8,23 +8,33 @@
   </ion-text>
 
 
-  <ion-item class="ion-margin-top ion-padding .ion-align-items-center .ion-no-border login " style="margin:0px">
-      <form [formGroup]="form" style="width: 100%">
-      
-        <ion-item class="ion-margin-top home" lines="none">
-          <ion-icon name="person-outline"></ion-icon>
-          <ion-input type="text" formControlName="userName" class="home"  placeholder="Usuário"></ion-input>
-        </ion-item>
-      
+  <ion-item class="login">
+    <form [formGroup]="form">
+      <div class="box-login ion-padding">
 
-        <ion-item class="ion-margin-top home" lines="none">
-          <ion-icon name="lock-closed-outline" class="home"></ion-icon>
-          <ion-input type="password" formControlName="password" placeholder="Senha" class="home"></ion-input>
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-img alt="" class="logo-input" name="image" src="./assets/icon/user.svg"></ion-img>
+          <ion-input type="text" formControlName="userName"  placeholder="Usuario"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top" lines="none">
+          <ion-img alt="" class="logo-input" name="image" src="./assets/icon/lock.svg"></ion-img>
+          <ion-input type="password" formControlName="password" placeholder="Senha"></ion-input>
         </ion-item>
 
         <ion-button class="ion-margin-top" (click)="login()">Entrar</ion-button>
   
         <ion-button (click)="abrirTela()" class="register ion-margin-top">Cadastrar</ion-button>
-      </form>    
+  
+        <ion-item class="img-login">
+          
+          <ion-label>
+            <ion-img alt="" class="login-list" name="image" src="./assets/login-google.png"></ion-img>
+          </ion-label>
+  
+        </ion-item>
+  
+      </div>
+    </form>    
   </ion-item>
 </ion-content>

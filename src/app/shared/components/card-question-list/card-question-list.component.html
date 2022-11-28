@@ -1,0 +1,41 @@
+<ion-header>
+	<ion-toolbar>
+    <ion-title>Questão</ion-title>
+    <ion-buttons fill="outline" slot="end">
+			<ion-button (click)="dismiss()">
+        <ion-icon name="close-outline"></ion-icon>
+				Fechar
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+
+	<ion-card>
+		<ion-card-content>			 
+			<h1>{{question.question}} </h1>
+			<h2>Autor: {{question.authorName}}</h2>   
+			<div style="text-align: center">
+				<ion-button class="ion-margin-top">Responder</ion-button>
+			</div> 
+		</ion-card-content> 
+	  </ion-card>
+	<ion-card>
+		<ion-card-content>	    
+			<h2><strong>Respostas</strong></h2>
+			<ion-list>
+				<ion-item *ngFor="let item of item; let index"> 
+					<div style="word-wrap: break-word;">{{question.question}}</div>
+					
+					
+						
+					
+				  
+				</ion-item>
+			  </ion-list>
+			  <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+				<ion-infinite-scroll-content></ion-infinite-scroll-content>
+			  </ion-infinite-scroll>
+		</ion-card-content> 
+	  </ion-card>
+  </ion-content>

@@ -1,0 +1,27 @@
+<ion-header>
+	<ion-toolbar>
+    <ion-title>Nova Questão</ion-title>
+    <ion-buttons fill="outline" slot="end">
+			<ion-button (click)="dismiss()">
+        <ion-icon name="close-outline"></ion-icon>
+				Fechar
+			</ion-button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="form">
+    <ion-item class="login">
+      <div class="box-text-area">
+        <mat-form-field>
+          <textarea formControlName="question" rows=10 matInput placeholder="Digite sua pergunta!">
+        </textarea>
+        </mat-form-field>
+      </div>      
+    </ion-item>
+    <div style="text-align: center">
+      <ion-button class="ion-margin-top"   (click)='cadastrar()'>Cadastrar</ion-button>
+    </div>    
+  </form>
+</ion-content>
