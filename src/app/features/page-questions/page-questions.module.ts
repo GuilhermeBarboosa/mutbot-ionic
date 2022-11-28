@@ -6,9 +6,14 @@ import { IonicModule } from '@ionic/angular';
 
 import { PageQuestionsPageRoutingModule } from './page-questions-routing.module';
 
-import { PageQuestionsPage } from './page-questions.page';
+import { PageQuestionsPage } from './page-question-list/page-questions.page';
 import { NavbarComponent } from 'src/app/shared/components/navbar/navbar.component';
-import { CardsQuestionsComponent } from '../../shared/components/cards-questions/cards-questions.component';
+import { CardQuestionsComponent } from 'src/app/shared/components/cards-questions/cards-questions.component';
+import { CardQuestionsListComponent } from 'src/app/shared/components/card-question-list/card-question-list.component';
+import { PageQuestionsForm } from './page-question-form/page-questions-form.page';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { CardResponseForm } from 'src/app/shared/components/card-response-form/card-response-form.page';
+;
 
 @NgModule({
   imports: [
@@ -16,7 +21,15 @@ import { CardsQuestionsComponent } from '../../shared/components/cards-questions
     FormsModule,
     IonicModule,
     PageQuestionsPageRoutingModule,
+    SharedModule
   ],
-  declarations: [PageQuestionsPage, NavbarComponent, CardsQuestionsComponent],
+  declarations: [
+    PageQuestionsPage,
+    NavbarComponent,
+    CardQuestionsComponent,
+    CardQuestionsListComponent,
+    PageQuestionsForm,
+    CardResponseForm
+    ],
 })
 export class PageQuestionsPageModule {}

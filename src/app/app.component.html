@@ -1,3 +1,18 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
+<ion-app> 
+  <!-- <ion-menu  contentId="main-content">
+    <ion-content class="">
+     
+    </ion-content>
+  </ion-menu> -->
+  <ion-menu side="start" contentId="app-content">
+		<ion-content>
+      <ion-item style="text-align: center;">
+        <ion-label>Explore tópicos</ion-label>    </ion-item>
+    <ion-button color="collorButtomNavBar" expand="full" size="default" >
+      <ion-icon name="settings-outline" slot="start"></ion-icon>
+      <ion-label>Questões</ion-label>
+    </ion-button>
+		</ion-content>
+	</ion-menu>
+  <ion-router-outlet  id="app-content"></ion-router-outlet>
 </ion-app>
