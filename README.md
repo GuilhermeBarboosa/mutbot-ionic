@@ -1,10 +1,3 @@
-Dev's
-  - Guilherme B. Rocha 
-  - Guilherme J. M. Mutão 
-  - João F.  da Silva Neto 
-  - Lindovaldo Costa Leão
-  - Vinicius R. de Sousa
-
 # MUTBOT
 
   No Mutbot, nosso foco é fazer você
@@ -14,3 +7,13 @@ por uma resposta a ser ajudado, e
 talvez, ajudar os necessitados que não
 buscam conhecimento da melhor
 forma.
+
+
+## Dev's
+  - Guilherme B. Rocha 
+  - Guilherme J. M. Mutão 
+  - João F.  da Silva Neto 
+  - Lindovaldo Costa Leão
+  - Vinicius R. de Sousa
+
+
