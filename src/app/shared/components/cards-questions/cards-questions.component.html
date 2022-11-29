@@ -26,7 +26,7 @@
         src="https://img1.gratispng.com/20180415/faq/kisspng-arrow-desktop-wallpaper-symbol-clip-art-up-arrow-5ad37ddc5b54e8.2856629015238097563741.jpg"
         slot="start"
       />
-      <h1 class="qtd_like">
+      <h1 class="qtd_like" [ngClass]="{ vermelho: !color, verde: color }">
         {{ valor }}
       </h1>
       <img

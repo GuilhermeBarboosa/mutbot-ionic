@@ -51,7 +51,6 @@ ion-card-subtitle {
 .qtd_like {
   margin: 0;
   text-align: center;
-  color: #008000;
   font-size: large;
 }
 
@@ -67,4 +66,12 @@ ion-card-subtitle {
 
 .questions {
   color: #383838;
+}
+
+.vermelho{
+  color: red;
+}
+
+.verde{
+  color: green;
 }

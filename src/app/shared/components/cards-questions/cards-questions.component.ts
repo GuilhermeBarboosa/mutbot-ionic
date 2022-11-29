@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardsQuestionsComponent implements OnInit {
   @Input() valor = 0;
+  color = true;
 
   plusLike() {
     this.valor++;
@@ -19,8 +20,10 @@ export class CardsQuestionsComponent implements OnInit {
   }
 
   likeColor(valor: number): void {
-    if (valor <= 0) {
-      console.log(valor);
+    if (valor < 0) {
+      this.color = false;
+    } else {
+      this.color = true;
     }
   }
 
