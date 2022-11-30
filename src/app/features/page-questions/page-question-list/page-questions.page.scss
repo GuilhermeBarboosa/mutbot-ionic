@@ -1,10 +1,55 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+
+ion-content {
+
+  .logo {
+    width: 50%;
+    margin: 0;
+    margin-top: 8%;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+
+  }
+
+  .titleText {
+
+    color: #563939;
+    font-family: 'Roboto';
+    font-size: 2em;
+
+    .principal {
+      font-weight: 800;
+      margin-bottom: 0px;
+    }
+
+    .subTitle {
+      margin-top: 0px;
+      font-size: 20px;
+    }
+  }
+
+
+}
+
 .card-questions{
   margin-top: 30px;
   width: 100%; 
 }
 
 h1{
-  margin-left: 30px;  
+    color: #563939;
+    font-family: 'Roboto';
+    word-break: normal;
+    text-align: center;
+}
+
+h3{
+  color: #563939;
+  font-family: 'Roboto';
+  word-break: normal;
+  text-align: center;
 }
 
 .header-page{

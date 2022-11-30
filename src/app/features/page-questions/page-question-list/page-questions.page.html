@@ -1,11 +1,14 @@
 <app-navbar></app-navbar>
 
-<ion-content>
+<ion-content class="ion-padding  ion-text-center">
 
-  <div class="header-page">
-    <h1>Questões</h1>
-    <ion-button class="ion-margin-top" size="small" (click)="openModalCreate()">Criar</ion-button>
-  </div>
+  
+    <h1>Não encontrou sua resposta?</h1>
+    
+    <h3>Escreva sua pergunta para a comunidade responder</h3>
+    
+    <ion-button class="ion-margin-top" size="large" (click)="openModalCreate()">Escrever pergunta</ion-button>
+  
   <ion-list>
     <ion-item *ngFor="let item of questionArray; let index">
       <div class="card-questions">
