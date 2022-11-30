@@ -1,8 +1,35 @@
+*{
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+}
+
 .box-text-area {
   padding-top: 20px;
   width: 100%;
 }
+ion-title{
+  font-size: 1.5em;
+  font-weight: bold;
+}
 
 textarea {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 20px;
+  height: auto;
+  margin: 0;
+  border-radius: 10px;
+  padding: 15px;
   width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+}
+
+.box-question{
+  padding: 15px;
+}
+
+.info-question{
+  margin-top: 10px;
 }

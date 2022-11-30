@@ -1,6 +1,6 @@
 <ion-header>
 	<ion-toolbar>
-    <ion-title>Nova Questão</ion-title>
+    
     <ion-buttons fill="outline" slot="end">
 			<ion-button (click)="dismiss()">
         <ion-icon name="close-outline"></ion-icon>
@@ -11,12 +11,48 @@
 </ion-header>
 
 <ion-content>
+
+  <ion-title>Nova Questão</ion-title>
+
+  
+  <ion-accordion-group class="info-question">
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>First Accordion</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Inclua detalhes sobre o seu objetivo
+
+        Descreva os resultados atuais e os esperados
+        
+        Inclua mensagens de erro
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>Second Accordion</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Second Content
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>Third Accordion</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Third Content
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+
   <form [formGroup]="form">
-    <ion-item class="login">
+    <ion-item class="box-question">
       <div class="box-text-area">
        
-          <textarea formControlName="question" rows=10 matInput placeholder="Digite sua pergunta!">
-        </textarea>
+          <textarea formControlName="question"  style="resize: none;" rows=10 matInput placeholder="Digite sua pergunta!">
+        
+          </textarea>
        
       </div>      
     </ion-item>
