@@ -4,26 +4,36 @@
 }
 
 .box-text-area {
-  padding-top: 20px;
   width: 100%;
 }
+
 ion-title{
   font-size: 1.5em;
   font-weight: bold;
 }
 
-textarea {
-  background: rgba(255,255,255,0.1);
+.title-questao{
+  padding-top: 15px;
+}
+
+.box-dicas{
+  box-shadow: 0px 11px 11px -2px rgba(0,0,0,0.25);
+  -webkit-box-shadow: 0px 11px 11px -2px rgba(0,0,0,0.36);
+  -moz-box-shadow: 0px 11px 11px -2px rgba(0,0,0,0.36);
+}
+
+.text-question {
   border: none;
   font-size: 20px;
   height: auto;
   margin: 0;
-  border-radius: 10px;
+  border-radius: 7px;
   padding: 15px;
   width: 100%;
-  background-color: #e8eeef;
-  color: #8a97a0;
+  background-color: #d6d6d6;
+  color: rgb(102, 102, 102);
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  resize: none;
 }
 
 .box-question{
@@ -32,4 +42,8 @@ textarea {
 
 .info-question{
   margin-top: 10px;
+}
+
+.indice-dicas{
+  color: #3c9ddc;
 }

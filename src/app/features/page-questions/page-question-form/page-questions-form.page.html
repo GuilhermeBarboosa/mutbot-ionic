@@ -1,63 +1,97 @@
 <ion-header>
-	<ion-toolbar>
-    
+  <ion-toolbar>
     <ion-buttons fill="outline" slot="end">
-			<ion-button (click)="dismiss()">
+      <ion-button (click)="dismiss()">
         <ion-icon name="close-outline"></ion-icon>
-				Fechar
-			</ion-button>
-		</ion-buttons>
-	</ion-toolbar>
+        Fechar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-title>Nova Questão</ion-title>
+  <ion-card class="box-dicas">
+    <ion-item>
 
-  
-  <ion-accordion-group class="info-question">
-    <ion-accordion value="first">
-      <ion-item slot="header" color="light">
-        <ion-label>First Accordion</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">
-        Inclua detalhes sobre o seu objetivo
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Dicas para novas questões</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <h1>Content</h1>
+      </ion-content>
 
-        Descreva os resultados atuais e os esperados
-        
-        Inclua mensagens de erro
-      </div>
-    </ion-accordion>
-    <ion-accordion value="second">
-      <ion-item slot="header" color="light">
-        <ion-label>Second Accordion</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">
-        Second Content
-      </div>
-    </ion-accordion>
-    <ion-accordion value="third">
-      <ion-item slot="header" color="light">
-        <ion-label>Third Accordion</ion-label>
-      </ion-item>
-      <div class="ion-padding" slot="content">
-        Third Content
-      </div>
-    </ion-accordion>
-  </ion-accordion-group>
+    </ion-item>
+
+
+    <ion-accordion-group class="info-question">
+      <ion-accordion value="first">
+        <ion-item slot="header" color="light">
+          <ion-label> <span class="indice-dicas">1 -</span> Resuma o problema </ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <ion-list>
+            <ion-item>
+              <ion-label>Inclua detalhes sobre o seu objetivo</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Descreva os resultados atuais e os esperados</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Se tiver mostre erros</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ion-accordion>
+      <ion-accordion value="second">
+        <ion-item slot="header" color="light">
+          <ion-label> <span class="indice-dicas">2 -</span> Descreva detalhamente sua dúvida </ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          Descreva com clareza e utilizando palavras comuns, para que todo tipo de público consiga entender e também contribuir.
+        </div>
+      </ion-accordion>
+      <ion-accordion value="third">
+        <ion-item slot="header" color="light">
+          <ion-label> <span class="indice-dicas">3 -</span> Caso seja de programação mostre códigos </ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">Mostre trechos de código, erros, tentativas e tudo que puder auxiliar.</div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </ion-card>
+
+
+    <ion-item>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title class="title-questao">Nova questão</ion-title>
+        </ion-toolbar>
+        <ion-content class="ion-padding">
+          <h1>Content</h1>
+        </ion-content>
+      </ion-header>
+    </ion-item>
 
   <form [formGroup]="form">
     <ion-item class="box-question">
       <div class="box-text-area">
-       
-          <textarea formControlName="question"  style="resize: none;" rows=10 matInput placeholder="Digite sua pergunta!">
-        
-          </textarea>
-       
-      </div>      
+        <textarea
+          class="text-question"
+          formControlName="question"
+          contentEditable="true"
+          rows="7"
+          matInput
+          placeholder="Digite sua pergunta!"
+        >
+        </textarea>
+      </div>
     </ion-item>
     <div style="text-align: center">
-      <ion-button class="ion-margin-top"   (click)='cadastrar()'>Cadastrar</ion-button>
-    </div>    
+      <ion-button class="ion-margin-top" (click)="cadastrar()"
+        >Cadastrar</ion-button
+      >
+    </div>
   </form>
 </ion-content>
