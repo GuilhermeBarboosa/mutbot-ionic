@@ -13,9 +13,17 @@ ion-card-subtitle {
   margin: 0;
 }
 
+.icon{
+  display: block;
+    float: right;
+    text-align: right;
+    margin-top: 0px;
+    margin: 10px;
+}
+
 ion-card{
   border: 1px solid rgb(207, 207, 207);
-  margin: 1%;
+  /* margin: 1%; */
 }
 
 .profile {
@@ -26,6 +34,16 @@ ion-card{
   margin-top: 1%;
   display: flex;
   width: 100%;
+}
+
+.card{
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.card-question{
+  padding: 0;
+  padding-bottom: 5px;
 }
 
 .header-title {
