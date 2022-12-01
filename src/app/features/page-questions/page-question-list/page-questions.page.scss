@@ -2,6 +2,10 @@
 
 ion-content {
 
+  ion-button{
+    margin-left: 23em;
+  }
+
   .logo {
     width: 50%;
     margin: 0;
@@ -35,25 +39,31 @@ ion-content {
 
 .card-questions{
   margin-top: 30px;
-  width: 100%; 
+  width: 100%;
 }
 
 h1{
-    color: #563939;
-    font-family: 'Roboto';
-    word-break: normal;
-    text-align: center;
-}
-
-h3{
   color: #563939;
   font-family: 'Roboto';
   word-break: normal;
-  text-align: center;
+  text-align: left;
+  padding: 0.5em;
+  margin-bottom: 0;
+}
+
+h5{
+  color: #563939;
+  font-family: 'Roboto';
+  word-break: normal;
+  text-align: left;
+  padding-left: 0.9em;
+  margin-top: 0;
+
 }
 
 .header-page{
   display: flex;
   width: 100%;
 }
+
 
