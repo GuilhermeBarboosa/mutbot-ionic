@@ -13,6 +13,28 @@ export class CardQuestionsComponent implements OnInit {
 
   @Input() question: Question;
 
+  @Input() valor = 0;
+  color = true;
+
+  plusLike() {
+    this.valor++;
+    this.likeColor(this.valor);
+  }
+
+  lessLike() {
+    this.valor--;
+    this.likeColor(this.valor);
+  }
+
+  likeColor(valor: number): void {
+    if (valor < 0) {
+      this.color = false;
+    } else {
+      this.color = true;
+    }
+  }
+
+
   constructor(private modalCtrl: ModalController) { }
 
   ngOnInit() {

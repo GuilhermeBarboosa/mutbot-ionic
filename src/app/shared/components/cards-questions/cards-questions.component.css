@@ -67,6 +67,7 @@ ion-card{
 }
 
 .question{
+  padding-left: 1em;
   color: #535353;
   font-weight: 500;
   font-size: 1.2rem;
@@ -84,4 +85,18 @@ ion-card-subtitle {
 
 .questions {
   color: #383838;
+}
+
+.vermelho{
+  color: red;
+}
+
+.verde{
+  color: green;
+}
+
+.qtd_like {
+  margin: 0;
+  text-align: center;
+  font-size: large;
 }
