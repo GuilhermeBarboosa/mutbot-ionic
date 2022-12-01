@@ -3,4 +3,5 @@ export interface Question {
     question: string;
     authorId: number;
     authorName: number;
+    createdDate: Date;
 }

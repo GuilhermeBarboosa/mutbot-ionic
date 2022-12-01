@@ -1,17 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
+import { Router } from '@angular/router';
+import { AuthService } from './shared/services/auth.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
-export class AppComponent {
-  constructor(platform: Platform) {
-    platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
+export class AppComponent implements OnInit {
 
+  constructor(platform: Platform,
+    private router: Router,
+    private authService: AuthService) {
+    platform.ready().then(() => {
     });
+  }
+
+  ngOnInit() {
+    if (this.authService.isLogged()) {
+      return true;
+    }
+    this.router.navigate(['/']);
+    return false;
   }
 }

@@ -38,14 +38,27 @@ ion-card{
   font-weight: 500;
 }
 
+.rodape{
+  display: flex;
+  justify-content: space-between;
+}
 
+.text-rodape{
+  color: #333333;
+  font-weight: 500;
+}
+
+.question{
+  color: #535353;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin: 1%;
+}
 
 ion-card-subtitle {
   color: #6d5c5c;
   font-weight: 400;
-
 }
-
 
 #dislike {
   transform: rotate(180deg);

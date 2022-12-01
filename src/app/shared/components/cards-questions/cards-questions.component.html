@@ -2,7 +2,18 @@
   <ion-card-content>
     <div>
       <ion-button size="small" (click)='viewQuestion(question)'><ion-icon slot="start" name="eye-outline"></ion-icon></ion-button>
-    </div>    
-      <h2>{{question.question}} </h2>
-  </ion-card-content> 
+    </div>
+
+
+      <ion-card-content>
+        <p class="question">{{question.question}}</p>
+      </ion-card-content>
+      <div class="rodape">
+        <ion-card-subtitle>Autor: <span class="text-rodape">{{question.authorName}}</span></ion-card-subtitle>
+        <ion-card-subtitle>Data <span class="text-rodape">{{question.createdDate | date:"dd/MM/yyyy"}}</span></ion-card-subtitle>
+      </div>
+
+
+
+  </ion-card-content>
 </ion-card>
