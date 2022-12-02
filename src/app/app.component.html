@@ -1,18 +1,54 @@
-<ion-app> 
+<ion-app>
   <!-- <ion-menu  contentId="main-content">
     <ion-content class="">
-     
+
     </ion-content>
   </ion-menu> -->
   <ion-menu side="start" contentId="app-content">
+
 		<ion-content>
       <ion-item style="text-align: center;">
-        <ion-label>Explore tópicos</ion-label>    </ion-item>
-    <ion-button color="collorButtomNavBar" expand="full" size="default" >
+        <ion-label>Explore tópicos</ion-label>
+      </ion-item>
+
+    <ion-button expand="full" size="default" >
       <ion-icon name="settings-outline" slot="start"></ion-icon>
       <ion-label>Questões</ion-label>
     </ion-button>
+
+    <ion-button expand="full" size="default" >
+      <ion-icon name="compass-outline" slot="start"></ion-icon>
+      <ion-label>Explore tópicos</ion-label>
+    </ion-button>
+
+    <ion-button expand="full" size="default" >
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+      <ion-label>Meu Perfil</ion-label>
+    </ion-button>
+
+    <ion-button expand="full" size="default" >
+      <ion-icon name="help-circle-outline" slot="start"></ion-icon>
+      <ion-label>Minhas questões</ion-label>
+    </ion-button>
+
+    <ion-button expand="full" size="default" >
+      <ion-icon name="thumbs-up-outline" slot="start"></ion-icon>
+      <ion-label>Minhas respostas</ion-label>
+    </ion-button>
+
+    <ion-button expand="full" size="default" >
+      <ion-icon name="settings-outline" slot="start"></ion-icon>
+      <ion-label>Minhas curtidas</ion-label>
+    </ion-button>
+
 		</ion-content>
+
+    <ion-footer>
+      <div class="logo">
+        <img src="/assets/logo.png" width="50%" />
+      </div>
+    </ion-footer>
+
 	</ion-menu>
   <ion-router-outlet  id="app-content"></ion-router-outlet>
 </ion-app>
