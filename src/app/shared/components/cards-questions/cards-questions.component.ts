@@ -13,7 +13,7 @@ export class CardQuestionsComponent implements OnInit {
 
   @Input() question: Question;
 
-  @Input() valor = 0;
+  @Input() valor = 10;
   color = true;
 
   plusLike() {

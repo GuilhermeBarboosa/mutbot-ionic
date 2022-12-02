@@ -39,6 +39,8 @@ ion-card{
 .card{
   margin: 0;
   padding-bottom: 0;
+  padding: 0;
+  padding-top: 5px;
 }
 
 .card-question{
@@ -96,7 +98,8 @@ ion-card-subtitle {
 }
 
 .qtd_like {
-  margin: 0;
-  text-align: center;
-  font-size: large;
+  display: absolute;
+
+  font-size: auto;
+  white-space: nowrap;
 }
