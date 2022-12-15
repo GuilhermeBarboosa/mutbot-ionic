@@ -2,3 +2,8 @@ div {
     width: 100%;
     word-wrap: break-word;
 }
+
+.wrapper-author-date{
+    display: flex;
+    justify-content: space-between;
+}
