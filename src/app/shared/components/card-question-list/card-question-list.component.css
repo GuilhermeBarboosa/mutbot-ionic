@@ -1,3 +1,7 @@
+*{
+    font-family: "Roboto", sans-serif;
+  }
+
 div {
     width: 100%;
     word-wrap: break-word;
@@ -6,4 +10,45 @@ div {
 .wrapper-author-date{
     display: flex;
     justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px !important;
 }
+
+.wrapper-author-date h2{
+    color: #6d5c5c;
+    font-size: 12px !important;
+}
+
+.wrapper-author-date h2 span{
+    color: #333333 !important;
+}
+
+hr{
+    background: #d5d4d8;
+    margin-top: 10px;
+}
+
+.wrapper-button{
+    display: flex;
+    justify-content: end;
+}
+
+
+
+
+
+  
+
+ion-card{
+ 
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 1px 0px 10px 1px rgb(0 0 0 / 12%);
+    border: 1px solid rgb(0 0 0 / 12%);
+  }
+
+ion-card-content h1{
+    color: #535353;
+}
+

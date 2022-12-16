@@ -14,12 +14,18 @@
 	<ion-card>
 		<ion-card-content>			 
 			<h1>{{question.question}} </h1>
+
+			<hr />
+
 			<div class="wrapper-author-date">
-			    <h2>Autor: {{question.authorName}}</h2> 
+			    <h2>Autor: <span>{{question.authorName}}</span></h2> 
 			    <span>{{question.createdDate | date : "dd/MM/yyyy"}}</span>
 		    </div>
+
 			
-			<div style="text-align: center">
+			
+			
+			<div class="wrapper-button">
 				<ion-button class="ion-margin-top" (click)="openModalResponse()">Responder</ion-button>
 			</div> 
 		</ion-card-content> 
