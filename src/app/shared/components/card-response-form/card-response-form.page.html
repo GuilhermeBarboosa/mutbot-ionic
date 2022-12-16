@@ -12,16 +12,16 @@
 
 <ion-content>
   <form [formGroup]="form">
-    <ion-item class="login">
+    <ion-item class="box-question">
       <div class="box-text-area">
-      
-          <textarea formControlName="response" rows=10 matInput placeholder="Digite sua resposta!">
+
+          <textarea class="text-question" formControlName="response" rows=10 matInput placeholder="Digite sua resposta!">
         </textarea>
-       
-      </div>      
+
+      </div>
     </ion-item>
     <div style="text-align: center">
       <ion-button class="ion-margin-top"  (click)='cadastrar()'>Responder</ion-button>
-    </div>    
+    </div>
   </form>
 </ion-content>
