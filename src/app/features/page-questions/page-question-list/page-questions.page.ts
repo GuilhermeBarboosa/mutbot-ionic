@@ -63,6 +63,7 @@ export class PageQuestionsPage implements OnInit {
     
     modal.onDidDismiss()
       .then(()=> {
+        this.questionArray = [];
         this.pageIndex = 0;
         this.loadQuestions(this.pageIndex);
       })

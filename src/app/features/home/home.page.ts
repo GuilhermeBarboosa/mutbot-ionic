@@ -42,7 +42,7 @@ export class HomePage implements OnInit {
       takeUntil(this.unsubscribeNotifier),
     ).subscribe({
       next: (data) => {console.log(data)
-        this.messageService.sucess('Cadastro efetuado com sucesso!');
+        this.messageService.sucess('Login efetuado com sucesso!');
         this.navCtrl.navigateForward('page');
       },
       error: () => {
