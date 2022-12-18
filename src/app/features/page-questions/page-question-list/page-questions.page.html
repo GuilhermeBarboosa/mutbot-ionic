@@ -6,7 +6,22 @@
     <h1>Não encontrou sua resposta?</h1>
 
     <h5>Escreva sua pergunta para a comunidade responder</h5>
-
+    <div>
+      <ion-list lines="none" class="ion-text-wrap">
+        <ion-item id="bl-team-selector">
+          <ion-label class="ion-text-wrap">
+            <ion-label slot="start">
+              <h4>Escolha uma Tag</h4>
+            </ion-label>
+            <ion-note>Escolha uma tag para Filtrar.</ion-note>
+          </ion-label>
+          
+          <ion-select class="ion-text-wrap"  interface="action-sheet" [interfaceOptions]="teamOptions" okText="Choose" cancelText="Cancel" (ionChange)="showSelectValue($event.detail)" [(ngModel)]="tag">
+            <ion-select-option *ngFor="let tag of tags; trackBy: id" [value]="tag.id">{{tag.name}}</ion-select-option>
+          </ion-select>
+          </ion-item>
+      </ion-list>
+    </div>
     <ion-button class="ion-margin-top" size="default" (click)="openModalCreate()">
        <ion-icon slot="start" name="add-circle-outline"></ion-icon>
        Fazer Pergunta

@@ -4,8 +4,10 @@ import { Subject, takeUntil } from 'rxjs';
 import { CardQuestionsListComponent } from 'src/app/shared/components/card-question-list/card-question-list.component';
 import { ListParams } from 'src/app/shared/interfaces/list-params';
 import { Question } from 'src/app/shared/interfaces/question';
+import { Tag } from 'src/app/shared/interfaces/tag';
 import { MessageService } from 'src/app/shared/services/messages.service';
 import { QuestionService } from 'src/app/shared/services/question.service';
+import { TagService } from 'src/app/shared/services/tag.service';
 import { PageQuestionsForm } from '../page-question-form/page-questions-form.page';
 
 @Component({
@@ -24,19 +26,24 @@ export class PageQuestionsPage implements OnInit {
     orderBy: 'question.createdDate'
   };
 
+  tags: Tag[] = [];
+  tagSelected: number
+
   pageIndex: number = 0;
 
-  constructor(private modalCtrl: ModalController, private questionService: QuestionService, private messageService: MessageService) {
+  constructor(private modalCtrl: ModalController, private questionService: QuestionService, private messageService: MessageService, private tag: TagService,) {
   }
   items = [];
   ngOnInit() {
     this.loadQuestions(0);
+    this.loadTag();
   }
 
   loadQuestions(index: number): void {
     this.params.pageIndex = index;
     console.log(index)
-    this.questionService.load(this.params).pipe(
+   
+    this.questionService.load(this.params, this.tagSelected).pipe(
       takeUntil(this.unsubscribeNotifier),
     ).subscribe({
       next: data => {       
@@ -46,7 +53,23 @@ export class PageQuestionsPage implements OnInit {
     });
   }
 
- 
+  showSelectValue(selected) {
+    this.pageIndex = 0;
+    this.tagSelected = selected.value;
+    this.questionArray = [];
+    this.loadQuestions(this.pageIndex);
+  }
+
+  loadTag() {
+    this.tag.loadAll().pipe(
+      takeUntil(this.unsubscribeNotifier),
+    ).subscribe({
+      next: data => {       
+          this.tags = (data.data);        
+      },
+      error: () =>this.messageService.error('Falha ao carregar Tag!')
+    });
+  }
 
   onIonInfinite(ev) {
     this.pageIndex = (this.pageIndex + 1);

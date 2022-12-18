@@ -23,12 +23,24 @@ import { QuestionRequest } from "../request/QuestionResquest";
         return this.httpClient.post<any>(`${environment.api}/${this.path}`, question);
       }
 
-      load(params: ListParams): Observable<Paginable<Question>> {
-        const finalParams = new HttpParams({
-          fromObject: {
-            ... params
-          }
-        });
+      load(params: ListParams, tag?:number): Observable<Paginable<Question>> {
+        let finalParams
+        if(tag) {
+          let filter = {tagId: tag}
+          finalParams = new HttpParams({
+            fromObject: {
+              ... params,
+              ...filter
+            }
+          });
+        } else {
+          finalParams = new HttpParams({
+            fromObject: {
+              ... params
+            }
+          });
+        }
+       
     
         return this.httpClient.get<Paginable<Question>>(`${environment.api}/${this.path}`, {
           params: finalParams
