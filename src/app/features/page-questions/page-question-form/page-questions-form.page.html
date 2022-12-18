@@ -75,7 +75,26 @@
     </ion-item>
 
   <form [formGroup]="form">
+    <div>
+      <ion-list lines="none" class="ion-text-wrap">
+        <ion-item id="bl-team-selector">
+          <ion-label class="ion-text-wrap">
+            <ion-label slot="start">
+              <h4>Escolha uma Tag</h4>
+            </ion-label>
+            <ion-note>Tag - > Tipo da questão.</ion-note>
+          </ion-label>
+          
+          <ion-select class="ion-text-wrap"  interface="action-sheet" [interfaceOptions]="teamOptions" okText="Choose" cancelText="Cancel" (ionChange)="showSelectValue($event.detail)" [(ngModel)]="tag">
+            <ion-select-option *ngFor="let tag of tags; trackBy: id" [value]="tag.id">{{tag.name}}</ion-select-option>
+          </ion-select>
+          </ion-item>
+      </ion-list>
+      
+    </div>
     <ion-item class="box-question">
+
+      
       <div class="box-text-area">
         <textarea
           class="text-question"
