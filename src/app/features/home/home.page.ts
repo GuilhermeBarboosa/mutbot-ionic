@@ -38,18 +38,24 @@ export class HomePage implements OnInit {
   }
 
   login(): void {
-    this.authService.login(this.form.get('userName').value, this.form.get('password').value).pipe(
-      takeUntil(this.unsubscribeNotifier),
-    ).subscribe({
-      next: (data) => {console.log(data)
-        this.messageService.sucess('Login efetuado com sucesso!');
-        this.navCtrl.navigateForward('page');
-      },
-      error: () => {
-        this.messageService.error('Falha no servidor entre em contato com administrador do sistema!')
+    if(!this.form.get('userName').value || !this.form.get('password').value) {
+        this.messageService.error('Adicione login e senha!')
         this.authService.logout();
-      }
-    });
+    } else {
+      this.authService.login(this.form.get('userName').value, this.form.get('password').value).pipe(
+        takeUntil(this.unsubscribeNotifier),
+      ).subscribe({
+        next: (data) => {console.log(data)
+          this.messageService.sucess('Login efetuado com sucesso!');
+          this.navCtrl.navigateForward('page');
+        },
+        error: () => {
+          this.messageService.error('Falha no servidor entre em contato com administrador do sistema!')
+          this.authService.logout();
+        }
+      });
+    }
+    
   }
 
 
