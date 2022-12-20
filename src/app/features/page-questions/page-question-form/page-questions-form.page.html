@@ -84,10 +84,12 @@
             </ion-label>
             <ion-note>Tag - > Tipo da questão.</ion-note>
           </ion-label>
-          
-          <ion-select class="ion-text-wrap"  interface="action-sheet" [interfaceOptions]="teamOptions" okText="Choose" cancelText="Cancel" (ionChange)="showSelectValue($event.detail)" [(ngModel)]="tag">
-            <ion-select-option *ngFor="let tag of tags; trackBy: id" [value]="tag.id">{{tag.name}}</ion-select-option>
-          </ion-select>
+
+          <select  class="ion-text-wrap"  interface="action-sheet" [interfaceOptions]="teamOptions" formControlName="tag" okText="Choose" cancelText="Cancel" (ionChange)="showSelectValue($event.detail)" [(ngModel)]="tag">
+            <option *ngFor="let tag of tags; trackBy: id" [value]="tag.id">
+              {{tag.name}}
+            </option>
+         </select>
           </ion-item>
       </ion-list>
       
